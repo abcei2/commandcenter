@@ -27,7 +27,9 @@ export PATH=$PATH:/home/pi/bin
 source ~/.bashrc  
 arduino-cli config init  
 arduino-cli core install arduino:avr  
-cd commandcenter/  
+# clone and upload ECSensor sketch  
+git clone https://github.com/abcei2/ECSensor  
+cd ECSensor/  
 arduino-cli lib install DallasTemperature "Grove 4-Digit Display" Arduino_JSON  
 arduino-cli lib update-index  
 arduino-cli compile -b arduino:avr:nano ECcontroler  
